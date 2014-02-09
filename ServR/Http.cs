@@ -17,7 +17,17 @@ namespace ServR {
                                   .Publish()
                                   .RefCount()
                                   .ObserveOn(scheduler ?? new EventLoopScheduler())
-                                  .Subscribe(t => handleRequest(t.Item1, t.Item2));
+                                  .Subscribe(t => {
+                                      try {
+                                          handleRequest(t.Item1, t.Item2);
+                                      }
+                                      catch {
+                                          t.Item2.StatusCode = 500;
+                                      }
+                                      finally {
+                                          t.Item2.Close();
+                                      }
+                                  });
 
             return new HttpServer(listener, input);
         }

@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServR", "ServR\ServR.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServR.Example", "ServR.Example\ServR.Example.csproj", "{F3DF0FF5-C5FA-4F07-8B68-4ADACAB9FE62}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServR.Task", "ServR.Task\ServR.Task.csproj", "{EC651288-0628-4DCD-958B-2D91D15D79F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServR.Task.Example", "ServR.Task.Example\ServR.Task.Example.csproj", "{9A25F35D-8044-4099-955F-28008C2C4D4B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F3DF0FF5-C5FA-4F07-8B68-4ADACAB9FE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3DF0FF5-C5FA-4F07-8B68-4ADACAB9FE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3DF0FF5-C5FA-4F07-8B68-4ADACAB9FE62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC651288-0628-4DCD-958B-2D91D15D79F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC651288-0628-4DCD-958B-2D91D15D79F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC651288-0628-4DCD-958B-2D91D15D79F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC651288-0628-4DCD-958B-2D91D15D79F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A25F35D-8044-4099-955F-28008C2C4D4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A25F35D-8044-4099-955F-28008C2C4D4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A25F35D-8044-4099-955F-28008C2C4D4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A25F35D-8044-4099-955F-28008C2C4D4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
