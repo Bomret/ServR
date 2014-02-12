@@ -7,10 +7,7 @@ namespace ServR.Example {
             var http = Http.CreateServer((req, res) => {
                 var hello = Encoding.UTF8.GetBytes("hello");
 
-                throw new Exception();
-
                 res.OutputStream.Write(hello, 0, hello.Length);
-                res.Close();
             }).Listen(1337);
 
             Console.ReadKey();

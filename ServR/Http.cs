@@ -11,21 +11,20 @@ namespace ServR {
             listener.Start();
 
             var input = Observable.FromAsync(listener.GetContextAsync)
-                                  .Select(c => Tuple.Create(c.Request, c.Response))
-                                  .Repeat()
                                   .Retry()
+                                  .Repeat()
                                   .Publish()
                                   .RefCount()
                                   .ObserveOn(scheduler ?? new EventLoopScheduler())
-                                  .Subscribe(t => {
+                                  .Subscribe(ctx => {
                                       try {
-                                          handleRequest(t.Item1, t.Item2);
+                                          handleRequest(ctx.Request, ctx.Response);
                                       }
-                                      catch {
-                                          t.Item2.StatusCode = 500;
+                                      catch (Exception error) {
+                                          ctx.Response.StatusCode = 500;
                                       }
                                       finally {
-                                          t.Item2.Close();
+                                          ctx.Response.Close();
                                       }
                                   });
 

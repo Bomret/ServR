@@ -12,8 +12,8 @@ namespace ServR {
         }
 
         public void Dispose() {
-            _listener.Stop();
             _handleRequest.Dispose();
+            _listener.Stop();
             _listener.Close();
         }
 
